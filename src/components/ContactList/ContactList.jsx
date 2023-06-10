@@ -1,6 +1,5 @@
 import css from './contact-list.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-// import { deleteContacts } from 'redux/slice';
 import { useEffect } from 'react';
 import { fetchContactsThunk, deleteContactThunk } from 'redux/operations';
 
@@ -19,8 +18,8 @@ const ContactsList = () => {
 
   const contact = result?.map(item => (
     <li key={item.id} className={css.item}>
-      <p>
-        {item.name}: {item.number}
+      <p className={css.contact}>
+        {item.name}: {item.phone}
       </p>
       <button
         type="button"

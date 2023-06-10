@@ -7,9 +7,7 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   const onChange = e => {
-    // const { value } = e.target;
     dispatch(filterAllContacts(e.target.value));
-    // console.log(e.target.value);
   };
 
   return (
